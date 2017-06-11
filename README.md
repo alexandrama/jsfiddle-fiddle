@@ -1,2 +1,2 @@
 # jsfiddle-fiddle
-Experimenting here. Some/all of this might not work.
+How to import JSFiddle results to Github: https://alexandrama.github.io/jsfiddle-fiddle/
