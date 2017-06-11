@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</head>
+
+<body>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+<script>
+
+	$(document).ready(function() {
+	$('#container').highcharts({
+				chart: {
+						style: {
+							fontFamily: 'Helvetica Neue'
+						},
+						plotBackgroundColor: null,
+						plotBorderWidth: null,
+						plotShadow: false,
+						type: 'pie',
+				},
+				title: {
+						text: 'Top 5 publications in posts on far-left pages'
+				},
+				tooltip: {
+						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				plotOptions: {
+						pie: {
+								allowPointSelect: true,
+								cursor: 'pointer',
+								dataLabels: {
+										enabled: true,
+									 format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+										style: {
+												color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+										}
+								}
+						}
+				},
+				series: [{
+						name: 'Publications',
+						colorByPoint: true,
+						data: [{
+								name: 'Independent (886)',
+								y: 886
+						}, {
+								name: 'Mirror (557)',
+								y: 557,
+								sliced: true,
+								selected: true
+						}, {
+								name: 'Guardian (518)',
+								y: 518
+						}, {
+								name: 'Canary (465)',
+								y: 465
+						}, {
+								name: 'Another Angry Voice (168)',
+								y: 168
+						}, {
+								name: 'Other (1,076)',
+								y: 2076
+						}]
+				}]
+		});
+	}
+	
+</script>
