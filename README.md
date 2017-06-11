@@ -1,2 +1,2 @@
 # jsfiddle-fiddle
-When Medium refuses to embed your JSFiddle code
+Experimenting here. Some/all of this might not work.
